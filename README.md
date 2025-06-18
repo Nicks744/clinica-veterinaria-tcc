@@ -1,155 +1,135 @@
-Clínica Veterinária Ananda Hattori
-1. Visão Geral do Projeto
-Este repositório contém o Sistema de Gerenciamento para a Clínica Veterinária Ananda Hattori, desenvolvido como Trabalho de Conclusão de Curso (TCC) pela equipe da TURMA B SEDUC 2 da ESCOLA SENAI SUIÇO BRASILEIRA PAULO ERNESTO TOLLE.
 
-A aplicação web foi projetada para otimizar e modernizar os processos operacionais de clínicas veterinárias, tendo como modelo a entidade fictícia “Clínica Ananda Hattori” localizada em São Paulo. O sistema digitaliza procedimentos essenciais, desde o agendamento de consultas até o gerenciamento completo do histórico de pacientes, com o objetivo de aprimorar a experiência dos tutores e dos profissionais da clínica. Através de uma interface estruturada e intuitiva, o projeto integra tecnologia e práticas veterinárias, promovendo maior eficiência, transparência e agilidade nos serviços.
+---
 
-2. Benefícios da Solução
-O Sistema Ananda Hattori oferece as seguintes vantagens estratégicas:
+# 🐾 Clínica Veterinária Ananda Hattori - Sistema de Gerenciamento
 
-Otimização Operacional: Centralização de dados e eliminação de processos manuais, resultando em maior eficiência administrativa.
+Este repositório contém o **Sistema de Gerenciamento para a Clínica Veterinária Ananda Hattori**, desenvolvido como **Trabalho de Conclusão de Curso (TCC)** pela equipe da **TURMA B SEDUC 2** da **ESCOLA SENAI SUIÇO BRASILEIRA PAULO ERNESTO TOLLE**.
 
-Acesso Facilitado ao Histórico: Disponibilização rápida e segura de informações sobre saúde e atendimentos dos animais.
+## 📌 1. Visão Geral do Projeto
 
-Atendimento Aprimorado: Redução do tempo de espera e melhoria na qualidade dos serviços mediante processos padronizados.
+A aplicação web foi projetada para **otimizar e modernizar** os processos operacionais de clínicas veterinárias, tendo como modelo a entidade fictícia “Clínica Ananda Hattori”, localizada em São Paulo.
 
-Usabilidade e Acessibilidade: Interface responsiva, compatível com desktops, tablets e smartphones.
+O sistema digitaliza processos essenciais — desde o agendamento de consultas até o gerenciamento completo do histórico de pacientes — com o objetivo de aprimorar a experiência dos tutores e profissionais da clínica.
 
-Escalabilidade: Arquitetura modular que permite futuras expansões e integração de novas funcionalidades.
+## 🚀 2. Benefícios da Solução
 
-Melhora na Comunicação: Facilita a interação entre a clínica e os tutores, promovendo maior transparência e engajamento.
+* **🔧 Otimização Operacional:** Centraliza dados e elimina processos manuais.
+* **📋 Acesso Facilitado ao Histórico:** Informações rápidas e seguras sobre os animais.
+* **🏥 Atendimento Aprimorado:** Reduz tempo de espera e padroniza os serviços.
+* **📱 Usabilidade e Acessibilidade:** Interface responsiva para todos os dispositivos.
+* **📈 Escalabilidade:** Estrutura modular com suporte a expansões.
+* **💬 Melhora na Comunicação:** Facilita o contato entre clínica e tutores.
 
-3. Funcionalidades Principais
-3.1 Para Tutores (Clientes)
-Cadastro detalhado e gerenciamento de animais (nome, idade, raça, peso, alergias, histórico de saúde).
+## ⚙️ 3. Funcionalidades Principais
 
-Agendamento interativo de consultas com registro de sintomas e observações.
+### 👤 Para Tutores (Clientes)
 
-Visualização dos agendamentos futuros e do histórico de atendimentos.
+* Cadastro e gerenciamento de pets (nome, idade, raça, peso, alergias, histórico).
+* Agendamento de consultas com registro de sintomas.
+* Visualização de consultas futuras e passadas.
+* Atualização de dados pessoais e dos pets.
 
-Gestão e atualização de dados pessoais e informações dos pets.
+### 🩺 Para Administradores da Clínica
 
-3.2 Para Administradores da Clínica
-Painel de controle centralizado para gestão de usuários, animais e agendamentos.
+* Painel centralizado para gestão de usuários, pets e agendamentos.
+* Operações CRUD completas.
+* Monitoramento do status de consultas.
+* Geração de relatórios e métricas.
 
-Operações completas de inclusão, edição, listagem e exclusão de dados.
+## 🖥️ 4. Telas Desenvolvidas
 
-Monitoramento do status das consultas (agendada, em andamento, finalizada, internação).
+* Página Inicial (Home)
+* Tela de Login
+* Cadastro de Animais
+* Listagem de Consultas
+* Exclusão de Animais
+* Perfil do Tutor (Usuário Comum)
+* Cadastro de Consulta
+* Painel do Administrador
+* Relatórios (Admin)
+* Tela de Internação
 
-Segurança por autenticação robusta (e.g., JWT) garantindo integridade e confidencialidade.
+## 🛠️ 5. Tecnologias Utilizadas
 
-Geração de relatórios e métricas para análise e suporte à decisão.
+### Frontend:
 
-4. Telas Desenvolvidas
-Página Inicial (Home)
+* HTML
+* CSS (Flexbox e Grid)
+* JavaScript
 
-Tela de Login
+### Backend:
 
-Tela de Cadastro de Animais
+* Java
+* Apache NetBeans 17
 
-Tela de Listagem de Consultas
+### Banco de Dados:
 
-Tela de Exclusão de Animais
+* MySQL
+* XAMPP (Apache, MySQL, PHP, phpMyAdmin)
 
-Tela do Usuário Comum (Perfil do Tutor)
+### Design e Prototipagem:
 
-Tela de Cadastro de Consulta
+* Figma
 
-Tela do Administrador (Painel Admin)
+### Integração:
 
-Tela de Relatório (Painel Admin)
+* Link direto para agendamento via WhatsApp
 
-Tela de Internação
+## 🧩 6. Modelagem e Diagramas
 
-5. Tecnologias Utilizadas
-Frontend:
+* Diagrama do Banco de Dados Relacional
+* Diagrama de Casos de Uso
+* Fluxogramas dos Processos (Cliente e Administrador)
+* Modelo Conceitual com Entidades e Relacionamentos
 
-HTML
+## 💻 7. Instruções para Execução Local
 
-CSS (Flexbox e Grid)
+### Pré-requisitos:
 
-JavaScript
+* Java Development Kit (JDK)
+* Apache NetBeans 17
+* XAMPP
 
-Backend:
+### Configuração do Banco de Dados:
 
-Java
+1. Inicie o Apache e o MySQL pelo painel XAMPP.
+2. No phpMyAdmin, crie o banco de dados: `clinica`.
+3. Importe o script SQL localizado em `database/` ou na raiz do projeto.
 
-Apache NetBeans 17 (IDE)
+### Configuração no NetBeans:
 
-Banco de Dados:
+1. Clone este repositório:
 
-MySQL
+   ```bash
+   git clone https://github.com/seu-usuario/clinica-veterinaria-tcc.git
+   ```
+2. Abra o projeto no **Apache NetBeans 17**.
+3. Verifique e, se necessário, ajuste a string de conexão JDBC:
 
-XAMPP (Apache, MySQL, PHP, phpMyAdmin)
+   ```java
+   jdbc:mysql://localhost:3306/anandahattori
+   ```
 
-Design e Prototipagem:
+### Execução:
 
-Figma
+* Clique no botão **"Play"** no NetBeans.
+* O sistema será executado em servidor local e abrirá automaticamente no navegador padrão.
 
-Integração:
+## 👩‍💻 8. Equipe de Desenvolvimento
 
-Link direto para agendamento via WhatsApp
+* Bruna Casemiro
+* Kauã Luiz Dias Faria
+* Lavinia
+* Miguel Fernandes
+* Lucas Nicolas
+* Davi Alencar
+* Elias Alencar
+* Guilherme Henrique
 
-6. Modelagem e Diagramas
-Diagrama do Banco de Dados relacional
+## 🙏 9. Agradecimentos
 
-Diagrama de Casos de Uso
+Agradecemos aos **Professores Sérgio Gal e Átila** pela orientação e suporte durante o desenvolvimento. Também estendemos nossos agradecimentos à equipe docente da **Escola SENAI Suíço Brasileira Paulo Ernesto Tolle** por sua dedicação e contribuição à nossa formação.
 
-Fluxogramas dos processos para Cliente e Administrador
+---
 
-Modelo Conceitual com entidades e relacionamentos
-
-7. Instruções para Execução Local
-Pré-requisitos:
-
-Java Development Kit (JDK)
-
-Apache NetBeans 17
-
-XAMPP instalado
-
-Configuração do Banco de Dados:
-
-Inicie Apache e MySQL pelo painel XAMPP.
-
-No phpMyAdmin, crie o banco de dados anandahattori.
-
-Importe o script SQL presente no diretório database/ ou raiz do projeto.
-
-Configuração no NetBeans:
-
-Clone este repositório localmente.
-
-Abra o projeto no Apache NetBeans 17.
-
-Verifique e ajuste, se necessário, a string de conexão JDBC para:
-jdbc:mysql://localhost:3306/anandahattori
-
-Execução:
-
-Execute o projeto no NetBeans (botão de “play”).
-
-A aplicação será iniciada em servidor local e aberta no navegador padrão.
-
-8. Equipe de Desenvolvimento
-Ananda Hattori Rodrigues
-
-Bruna Casemiro
-
-Kauã Luiz Dias Faria
-
-Lavinia
-
-Miguel Fernandes
-
-Lucas Nicolas
-
-Davi Alencar
-
-Elias Alencar
-
-Guilherme Henrique
-
-9. Agradecimentos
-Agradecemos aos Professores Sérgio Gal e Átila pela orientação e suporte durante o desenvolvimento do projeto. Estendemos nossos agradecimentos à equipe docente da Escola SENAI Suíço Brasileira Paulo Ernesto Tolle pela formação acadêmica e apoio contínuo.
 

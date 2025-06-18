@@ -1,5 +1,6 @@
 Clínica Veterinária Ananda Hattori
-Visão Geral do Projeto
+
+Visão Geral do Projeto:
 Este é o repositório do Sistema de Gerenciamento para Clínica Veterinária Ananda Hattori, um projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) pelo grupo da TURMA B SEDUC 2 da ESCOLA SENAI SUIÇO BRASILEIRA PAULO ERNESTO TOLLE.
 
 Nosso sistema é uma aplicação web completa, focada em otimizar os processos de uma clínica veterinária fictícia em São Paulo. Ele visa aprimorar a gestão de dados de animais e o fluxo de atendimento, beneficiando tanto os tutores de pets quanto os profissionais da clínica. Com uma interface moderna e intuitiva, a plataforma busca integrar tecnologia e cuidado animal, promovendo maior agilidade, transparência e eficiência.

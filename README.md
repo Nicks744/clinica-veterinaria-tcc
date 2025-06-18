@@ -9,21 +9,19 @@ Este repositório contém o **Sistema de Gerenciamento para a Clínica Veteriná
 
 ## 📑 Sumário
 
-1. [Visão Geral do Projeto](#1-visão-geral-do-projeto)
-2. [Benefícios da Solução](#2-benefícios-da-solução)
-3. [Funcionalidades Principais](#3-funcionalidades-principais)
-     • [Para Tutores (Clientes)](#-para-tutores-clientes)
-     • [Para Administradores da Clínica](#-para-administradores-da-clínica)
-4. [Telas Desenvolvidas](#4-telas-desenvolvidas)
-5. [Tecnologias Utilizadas](#5-tecnologias-utilizadas)
-6. [Modelagem e Diagramas](#6-modelagem-e-diagramas)
-7. [Instruções para Execução Local](#7-instruções-para-execução-local)
-8. [Equipe de Desenvolvimento](#8-equipe-de-desenvolvimento)
-9. [Agradecimentos](#9-agradecimentos)
+1. [Visão Geral do Projeto](-#1-visão-geral-do-projeto)
+2. [Benefícios da Solução](-#2-benefícios-da-solução)
+3. [Funcionalidades Principais](-#3-funcionalidades-principais)
+     • [Para Tutores (Clientes)](-#-para-tutores-clientes)
+     • [Para Administradores da Clínica](-#-para-administradores-da-clínica)
+4. [Telas Desenvolvidas](-#4-telas-desenvolvidas)
+5. [Tecnologias Utilizadas](-#5-tecnologias-utilizadas)
+6. [Modelagem e Diagramas](-#6-modelagem-e-diagramas)
+7. [Instruções para Execução Local](-#7-instruções-para-execução-local)
+8. [Equipe de Desenvolvimento](-#8-equipe-de-desenvolvimento)
+9. [Agradecimentos](-#9-agradecimentos)
 
 ---
-
-Esse sumário usa links internos que funcionam automaticamente no GitHub, facilitando a navegação dentro do `README.md`. Deseja que eu gere o arquivo completo com esse sumário já inserido?
 
 
 ## 📌 1. Visão Geral do Projeto

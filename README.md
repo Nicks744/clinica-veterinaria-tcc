@@ -9,7 +9,7 @@ Este repositório contém o **Sistema de Gerenciamento para a Clínica Veteriná
 
 ## 📑 Sumário
 
-1. [Visão Geral do Projeto](README.md#-1-visão-geral-do-projeto)
+1. [Visão Geral do Projeto](#-1-visão-geral-do-projeto)
 2. [Benefícios da Solução](README.md#-2-benefícios-da-solução)
 3. [Funcionalidades Principais](README.md#%EF%B8%8F-3-funcionalidades-principais)
      • [Para Tutores (Clientes)](README.md#-para-tutores-clientes)

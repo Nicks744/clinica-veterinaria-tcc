@@ -10,16 +10,16 @@ Este repositório contém o **Sistema de Gerenciamento para a Clínica Veteriná
 ## 📑 Sumário
 
 1. [Visão Geral do Projeto](README.md#-1-visão-geral-do-projeto)
-2. [Benefícios da Solução](README.md#-#2-benefícios-da-solução)
-3. [Funcionalidades Principais](README.md#-#3-funcionalidades-principais)
-     • [Para Tutores (Clientes)](README.md#-#-para-tutores-clientes)
-     • [Para Administradores da Clínica](README.md#-#-para-administradores-da-clínica)
-4. [Telas Desenvolvidas](README.md#-#4-telas-desenvolvidas)
-5. [Tecnologias Utilizadas](README.md#-#5-tecnologias-utilizadas)
-6. [Modelagem e Diagramas](README.md#-#6-modelagem-e-diagramas)
-7. [Instruções para Execução Local](README.md#-#7-instruções-para-execução-local)
-8. [Equipe de Desenvolvimento](README.md#-#8-equipe-de-desenvolvimento)
-9. [Agradecimentos](README.md#-#9-agradecimentos)
+2. [Benefícios da Solução](README.md#-2-benefícios-da-solução)
+3. [Funcionalidades Principais](README.md#%EF%B8%8F-3-funcionalidades-principais)
+     • [Para Tutores (Clientes)](README.md#-para-tutores-clientes)
+     • [Para Administradores da Clínica](README.md#-para-administradores-da-clínica)
+4. [Telas Desenvolvidas](README.md#%EF%B8%8F-4-telas-desenvolvidas)
+5. [Tecnologias Utilizadas](README.md#%EF%B8%8F-5-tecnologias-utilizadas)
+6. [Modelagem e Diagramas](README.md#-6-modelagem-e-diagramas)
+7. [Instruções para Execução Local](README.md#-7-instruções-para-execução-local)
+8. [Equipe de Desenvolvimento](README.md#-8-equipe-de-desenvolvimento)
+9. [Agradecimentos](README.md#-9-agradecimentos)
 
 ---
 

@@ -1,0 +1,1792 @@
+2025-11-26 08:56:09 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 14928 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 08:56:09 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 08:56:09 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 08:56:11 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 08:56:11 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2025-11-26 08:56:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 08:56:13 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 08:56:13 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 08:56:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 08:56:13 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3288 ms
+2025-11-26 08:56:13 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 08:56:13 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 08:56:14 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 08:56:14 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 08:56:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 08:56:45 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 08:56:45 - o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 08:56:45 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 08:56:46 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 08:56:46 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 08:57:30 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 21364 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 08:57:30 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 08:57:30 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 08:57:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 08:57:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2025-11-26 08:57:33 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 08:57:33 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 08:57:33 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 08:57:33 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 08:57:33 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2964 ms
+2025-11-26 08:57:33 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 08:57:34 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 08:57:34 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 08:57:34 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 08:57:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 08:57:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 08:57:45 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 08:57:48 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 08:57:48 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 08:57:49 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 901a7edd-4b63-423f-9c67-f60ee5a5790f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 08:57:50 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 08:57:52 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-11-26 08:57:52 - c.p.paymentapi.PaymentApiApplication - Started PaymentApiApplication in 22.214 seconds (JVM running for 23.053)
+2025-11-26 08:57:54 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Error thrown while acquiring connection from data source
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5.045 milliseconds ago. The last packet sent successfully to the server was 5.045 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1374)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1359)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:408)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5.045 milliseconds ago. The last packet sent successfully to the server was 5.045 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:762)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:701)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:156)
+	at com.mysql.cj.NativeSession.queryServerVariable(NativeSession.java:589)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1366)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 17 common frames omitted
+2025-11-26 08:58:16 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 18300 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 08:58:16 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 08:58:16 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 08:58:17 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 08:58:17 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+2025-11-26 08:58:19 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 08:58:19 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 08:58:19 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 08:58:19 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 08:58:19 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3004 ms
+2025-11-26 08:58:19 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 08:58:19 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 08:58:19 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 08:58:20 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 08:58:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 08:58:30 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 08:58:30 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 08:58:34 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 08:58:34 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 08:58:34 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e416e509-fcbd-4148-8cc1-ce925bfcc727
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 08:58:35 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 08:58:36 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2025-11-26 08:58:36 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 08:58:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 08:58:39 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 08:58:39 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-11-26 08:58:39 - o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-11-26 08:58:39 - o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-11-26 09:03:15 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 18944 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 09:03:15 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 09:03:15 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 09:03:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 09:03:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2025-11-26 09:03:18 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 09:03:18 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 09:03:18 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 09:03:18 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 09:03:18 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3807 ms
+2025-11-26 09:03:19 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 09:03:19 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 09:03:20 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 09:03:20 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 09:03:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 09:03:48 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 21776 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 09:03:48 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 09:03:48 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 09:03:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 09:03:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2025-11-26 09:03:50 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 09:03:50 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 09:03:50 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 09:03:51 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 09:03:51 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2930 ms
+2025-11-26 09:03:51 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 09:03:51 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 09:03:51 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 09:03:51 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 09:03:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 09:04:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 09:04:02 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 09:04:13 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 09:04:13 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 09:04:14 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 989fd1c6-7aa6-4f49-9008-906e3848efe3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 09:04:14 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 09:04:16 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-11-26 09:04:16 - c.p.paymentapi.PaymentApiApplication - Started PaymentApiApplication in 29.465 seconds (JVM running for 30.229)
+2025-11-26 09:04:52 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-26 09:04:52 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-26 09:04:52 - o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2025-11-26 09:04:55 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_
+2025-11-26 09:05:22 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_
+2025-11-26 09:12:04 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2025-11-26 09:12:08 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 09:12:09 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [joao.silva@email.com]
+2025-11-26 09:12:09 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.cpf=?
+2025-11-26 09:12:09 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [123.456.789-01]
+2025-11-26 09:12:12 - org.hibernate.SQL - 
+    insert 
+    into
+        usuario
+        (celular, codigo_recuperacao_expira_em, codigo_recuperacao_senha, codigo_verificacao, cpf, criado_em, email, endereco, foto_perfil, nome, plano, plano_valido_ate, senha, status, tentativas_recuperacao, ultima_tentativa_recuperacao, verificado_em) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 99999-8888]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [446275]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [123.456.789-01]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [2025-11-26T09:12:10.831238500]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [joao.silva@email.com]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [João Silva]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [$2a$10$bb3WY6wQowFzKzO8nanbFu2YdlU5d/OpHrgw3EAGLaQkrDDsjJfNG]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [AGUARDANDO_VERIFICACAO]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [0]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 09:12:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [null]
+2025-11-26 09:13:20 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 09:13:21 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [joao.silva@email.com]
+2025-11-26 09:13:22 - org.hibernate.SQL - 
+    update
+        usuario 
+    set
+        celular=?,
+        codigo_recuperacao_expira_em=?,
+        codigo_recuperacao_senha=?,
+        codigo_verificacao=?,
+        cpf=?,
+        criado_em=?,
+        email=?,
+        endereco=?,
+        foto_perfil=?,
+        nome=?,
+        plano=?,
+        plano_valido_ate=?,
+        senha=?,
+        status=?,
+        tentativas_recuperacao=?,
+        ultima_tentativa_recuperacao=?,
+        verificado_em=? 
+    where
+        id=?
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 99999-8888]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [123.456.789-01]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [2025-11-26T09:12:10.831239]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [joao.silva@email.com]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [João Silva]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [$2a$10$bb3WY6wQowFzKzO8nanbFu2YdlU5d/OpHrgw3EAGLaQkrDDsjJfNG]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [ATIVO]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [0]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [2025-11-26T09:13:21.957339]
+2025-11-26 09:13:22 - o.h.type.descriptor.sql.BasicBinder - binding parameter [18] as [BIGINT] - [3]
+2025-11-26 09:40:57 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m55s18ms964µs600ns).
+2025-11-26 09:42:29 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 09:42:59 - o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-11-26 09:42:59 - o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30013ms.
+2025-11-26 09:42:59 - o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-11-26 09:45:10 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 18548 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 09:45:10 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 09:45:10 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 09:45:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 09:45:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
+2025-11-26 09:45:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 09:45:24 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 1692 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 09:45:24 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 09:45:24 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 09:45:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 09:45:28 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 285 ms. Found 3 JPA repository interfaces.
+2025-11-26 09:45:32 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 09:45:32 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 09:45:32 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 09:45:32 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 09:45:32 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8081 ms
+2025-11-26 09:45:33 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 09:45:33 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 09:45:33 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 09:45:34 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 09:45:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 09:46:05 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 09:46:05 - o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:295)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:252)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 09:46:05 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 09:46:06 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 09:46:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 09:46:13 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:565)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 09:46:13 - o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-11-26 09:46:13 - o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-11-26 09:46:13 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2025-11-26 09:46:13 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2025-11-26 09:46:13 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-11-26 09:46:13 - o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-11-26 09:46:13 - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:919)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.petvida.paymentapi.PaymentApiApplication.main(PaymentApiApplication.java:13)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:565)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 36 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:582)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:537)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:424)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:134)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 49 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:576)
+	... 55 common frames omitted
+2025-11-26 09:49:12 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 2208 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 09:49:12 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 09:49:12 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 09:49:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 09:49:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2025-11-26 09:49:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 09:49:15 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 09:49:15 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 09:49:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 09:49:15 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2901 ms
+2025-11-26 09:49:16 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 09:49:16 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 09:49:16 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 09:49:16 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 09:49:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 09:49:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 09:49:20 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 09:49:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 09:49:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 09:49:23 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: fcd6f500-f2db-4d39-be70-d0acaab38042
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 09:49:24 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 09:49:26 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-11-26 09:49:26 - c.p.paymentapi.PaymentApiApplication - Started PaymentApiApplication in 14.104 seconds (JVM running for 14.788)
+2025-11-26 09:49:37 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-26 09:49:37 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-26 09:49:37 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-11-26 09:49:38 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 09:49:38 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaualuiz1512@email.com]
+2025-11-26 09:49:38 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.cpf=?
+2025-11-26 09:49:38 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [420.332.608-79]
+2025-11-26 09:49:39 - org.hibernate.SQL - 
+    insert 
+    into
+        usuario
+        (celular, codigo_recuperacao_expira_em, codigo_recuperacao_senha, codigo_verificacao, cpf, criado_em, email, endereco, foto_perfil, nome, plano, plano_valido_ate, senha, status, tentativas_recuperacao, ultima_tentativa_recuperacao, verificado_em) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 95029-3895]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [489195]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [420.332.608-79]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [2025-11-26T09:49:39.438762800]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [kaualuiz1512@email.com]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [Kaua luiz dias faria]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [$2a$10$T5KQM6hffV4p5YPHnTWU7uXsPGpl92b1F3OL5ERxnW.XFSJnWAAp.]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [AGUARDANDO_VERIFICACAO]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [0]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 09:49:39 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [null]
+2025-11-26 09:53:47 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 09:53:48 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaualuiz1512@email.com]
+2025-11-26 09:54:04 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2025-11-26 09:54:05 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2025-11-26 09:54:09 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_
+2025-11-26 09:54:42 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 09:54:45 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 09:54:46 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 09:54:51 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 09:57:38 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 09:57:42 - org.hibernate.SQL - 
+    select
+        agendament0_.id as id1_0_,
+        agendament0_.contato as contato2_0_,
+        agendament0_.cpf as cpf3_0_,
+        agendament0_.criado_em as criado_e4_0_,
+        agendament0_.data_agendamento as data_age5_0_,
+        agendament0_.data_realizacao as data_rea6_0_,
+        agendament0_.descricao as descrica7_0_,
+        agendament0_.diagnostico as diagnost8_0_,
+        agendament0_.especie as especie9_0_,
+        agendament0_.exames_solicitados as exames_10_0_,
+        agendament0_.genero as genero11_0_,
+        agendament0_.historico_saude as histori12_0_,
+        agendament0_.horario as horario13_0_,
+        agendament0_.idade_pet as idade_p14_0_,
+        agendament0_.nome_dono as nome_do15_0_,
+        agendament0_.nome_pet as nome_pe16_0_,
+        agendament0_.nome_veterinario as nome_ve17_0_,
+        agendament0_.observacoes as observa18_0_,
+        agendament0_.observacoes_medicas as observa19_0_,
+        agendament0_.peso as peso20_0_,
+        agendament0_.peso_pet as peso_pe21_0_,
+        agendament0_.prescricao as prescri22_0_,
+        agendament0_.raca as raca23_0_,
+        agendament0_.sintomas as sintoma24_0_,
+        agendament0_.status as status25_0_,
+        agendament0_.tipo as tipo26_0_,
+        agendament0_.usuario_id as usuario27_0_ 
+    from
+        agendamento agendament0_ 
+    where
+        agendament0_.usuario_id=? 
+        and agendament0_.tipo=?
+2025-11-26 09:57:43 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-11-26 09:57:43 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [CONSULTA]
+2025-11-26 09:57:47 - org.hibernate.SQL - 
+    select
+        agendament0_.id as id1_0_,
+        agendament0_.contato as contato2_0_,
+        agendament0_.cpf as cpf3_0_,
+        agendament0_.criado_em as criado_e4_0_,
+        agendament0_.data_agendamento as data_age5_0_,
+        agendament0_.data_realizacao as data_rea6_0_,
+        agendament0_.descricao as descrica7_0_,
+        agendament0_.diagnostico as diagnost8_0_,
+        agendament0_.especie as especie9_0_,
+        agendament0_.exames_solicitados as exames_10_0_,
+        agendament0_.genero as genero11_0_,
+        agendament0_.historico_saude as histori12_0_,
+        agendament0_.horario as horario13_0_,
+        agendament0_.idade_pet as idade_p14_0_,
+        agendament0_.nome_dono as nome_do15_0_,
+        agendament0_.nome_pet as nome_pe16_0_,
+        agendament0_.nome_veterinario as nome_ve17_0_,
+        agendament0_.observacoes as observa18_0_,
+        agendament0_.observacoes_medicas as observa19_0_,
+        agendament0_.peso as peso20_0_,
+        agendament0_.peso_pet as peso_pe21_0_,
+        agendament0_.prescricao as prescri22_0_,
+        agendament0_.raca as raca23_0_,
+        agendament0_.sintomas as sintoma24_0_,
+        agendament0_.status as status25_0_,
+        agendament0_.tipo as tipo26_0_,
+        agendament0_.usuario_id as usuario27_0_ 
+    from
+        agendamento agendament0_ 
+    where
+        agendament0_.usuario_id=? 
+        and agendament0_.tipo=?
+2025-11-26 09:57:47 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2025-11-26 09:57:47 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [CONSULTA]
+2025-11-26 09:58:00 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2025-11-26 10:36:35 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 15116 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 10:36:35 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 10:36:35 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 10:36:36 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 10:36:36 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 3 JPA repository interfaces.
+2025-11-26 10:36:38 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 10:36:38 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 10:36:38 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 10:36:38 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 10:36:38 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3041 ms
+2025-11-26 10:36:38 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 10:36:38 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 10:36:39 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 10:36:39 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 10:36:39 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 10:36:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 10:36:43 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 10:36:45 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 10:36:45 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 10:36:46 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b330e21d-1ded-4621-9f97-7213d4072a46
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 10:36:46 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 10:36:49 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-11-26 10:36:49 - c.p.paymentapi.PaymentApiApplication - Started PaymentApiApplication in 14.958 seconds (JVM running for 15.739)
+2025-11-26 10:38:47 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-26 10:38:47 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-26 10:38:47 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-11-26 10:38:48 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_0_,
+        usuario0_.celular as celular2_2_0_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_0_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_0_,
+        usuario0_.codigo_verificacao as codigo_v5_2_0_,
+        usuario0_.cpf as cpf6_2_0_,
+        usuario0_.criado_em as criado_e7_2_0_,
+        usuario0_.email as email8_2_0_,
+        usuario0_.endereco as endereco9_2_0_,
+        usuario0_.foto_perfil as foto_pe10_2_0_,
+        usuario0_.nome as nome11_2_0_,
+        usuario0_.plano as plano12_2_0_,
+        usuario0_.plano_valido_ate as plano_v13_2_0_,
+        usuario0_.senha as senha14_2_0_,
+        usuario0_.status as status15_2_0_,
+        usuario0_.tentativas_recuperacao as tentati16_2_0_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_0_,
+        usuario0_.verificado_em as verific18_2_0_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.id=?
+2025-11-26 10:38:48 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2025-11-26 10:38:49 - org.hibernate.SQL - 
+    delete 
+    from
+        agendamento 
+    where
+        usuario_id=?
+2025-11-26 10:38:49 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2025-11-26 10:38:49 - org.hibernate.SQL - 
+    delete 
+    from
+        pagamento 
+    where
+        usuario_id=?
+2025-11-26 10:38:49 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2025-11-26 10:38:49 - org.hibernate.SQL - 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+2025-11-26 10:38:49 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2025-11-26 11:00:41 - c.p.paymentapi.PaymentApiApplication - Starting PaymentApiApplication using Java 17.0.12 on DESKTOP-II22I4G with PID 15372 (C:\Users\SEDUC DEST2\Downloads\payment-api\payment-api\build\classes\java\main started by SEDUC DEST2 in C:\Users\SEDUC DEST2\Downloads\payment-api)
+2025-11-26 11:00:41 - c.p.paymentapi.PaymentApiApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-26 11:00:41 - c.p.paymentapi.PaymentApiApplication - The following 1 profile is active: "prod"
+2025-11-26 11:00:42 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 11:00:42 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 3 JPA repository interfaces.
+2025-11-26 11:00:44 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-11-26 11:00:44 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-26 11:00:44 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-26 11:00:44 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-26 11:00:44 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3235 ms
+2025-11-26 11:00:45 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 11:00:45 - org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-26 11:00:45 - o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-26 11:00:45 - com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2025-11-26 11:00:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 11:00:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 11:00:50 - org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-26 11:00:53 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-26 11:00:53 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 11:00:55 - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 20200474-525b-4b0f-a392-caa72d65013e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-26 11:00:55 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 11:00:57 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-11-26 11:00:57 - c.p.paymentapi.PaymentApiApplication - Started PaymentApiApplication in 17.232 seconds (JVM running for 20.084)
+2025-11-26 11:01:49 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-26 11:01:49 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-26 11:01:49 - o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-11-26 11:01:49 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 11:01:50 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:01:50 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.cpf=?
+2025-11-26 11:01:50 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [420.332.608-79]
+2025-11-26 11:01:51 - org.hibernate.SQL - 
+    insert 
+    into
+        usuario
+        (celular, codigo_recuperacao_expira_em, codigo_recuperacao_senha, codigo_verificacao, cpf, criado_em, email, endereco, foto_perfil, nome, plano, plano_valido_ate, senha, status, tentativas_recuperacao, ultima_tentativa_recuperacao, verificado_em) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 95029-3895]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [880510]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [420.332.608-79]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [2025-11-26T11:01:51.233252]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [Kaua luiz dias faria]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [$2a$10$L44jnCwB26XpY7wBFiMXB.1O4FW36LtNaqVtbFpK9JZ5H0gz42TjG]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [AGUARDANDO_VERIFICACAO]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [0]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 11:01:51 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [null]
+2025-11-26 11:03:12 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_,
+        usuario0_.celular as celular2_2_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_,
+        usuario0_.codigo_verificacao as codigo_v5_2_,
+        usuario0_.cpf as cpf6_2_,
+        usuario0_.criado_em as criado_e7_2_,
+        usuario0_.email as email8_2_,
+        usuario0_.endereco as endereco9_2_,
+        usuario0_.foto_perfil as foto_pe10_2_,
+        usuario0_.nome as nome11_2_,
+        usuario0_.plano as plano12_2_,
+        usuario0_.plano_valido_ate as plano_v13_2_,
+        usuario0_.senha as senha14_2_,
+        usuario0_.status as status15_2_,
+        usuario0_.tentativas_recuperacao as tentati16_2_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_,
+        usuario0_.verificado_em as verific18_2_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.email=?
+2025-11-26 11:03:12 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:03:13 - org.hibernate.SQL - 
+    update
+        usuario 
+    set
+        celular=?,
+        codigo_recuperacao_expira_em=?,
+        codigo_recuperacao_senha=?,
+        codigo_verificacao=?,
+        cpf=?,
+        criado_em=?,
+        email=?,
+        endereco=?,
+        foto_perfil=?,
+        nome=?,
+        plano=?,
+        plano_valido_ate=?,
+        senha=?,
+        status=?,
+        tentativas_recuperacao=?,
+        ultima_tentativa_recuperacao=?,
+        verificado_em=? 
+    where
+        id=?
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 95029-3895]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [420.332.608-79]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [2025-11-26T11:01:51.233252]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [Kaua luiz dias faria]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [$2a$10$L44jnCwB26XpY7wBFiMXB.1O4FW36LtNaqVtbFpK9JZ5H0gz42TjG]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [ATIVO]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [0]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [2025-11-26T11:03:12.926362100]
+2025-11-26 11:03:13 - o.h.type.descriptor.sql.BasicBinder - binding parameter [18] as [BIGINT] - [5]
+2025-11-26 11:07:15 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_0_,
+        usuario0_.celular as celular2_2_0_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_0_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_0_,
+        usuario0_.codigo_verificacao as codigo_v5_2_0_,
+        usuario0_.cpf as cpf6_2_0_,
+        usuario0_.criado_em as criado_e7_2_0_,
+        usuario0_.email as email8_2_0_,
+        usuario0_.endereco as endereco9_2_0_,
+        usuario0_.foto_perfil as foto_pe10_2_0_,
+        usuario0_.nome as nome11_2_0_,
+        usuario0_.plano as plano12_2_0_,
+        usuario0_.plano_valido_ate as plano_v13_2_0_,
+        usuario0_.senha as senha14_2_0_,
+        usuario0_.status as status15_2_0_,
+        usuario0_.tentativas_recuperacao as tentati16_2_0_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_0_,
+        usuario0_.verificado_em as verific18_2_0_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.id=?
+2025-11-26 11:07:15 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-11-26 11:07:17 - org.hibernate.SQL - 
+    insert 
+    into
+        pagamento
+        (data_criacao, data_pagamento, id_transacao, mensagem, merchant_city, merchant_name, metodo_pagamento, pix_expira_em, pix_key, pix_payload, plano, qr_code_base64, status, usuario_id, valor) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-11-26T11:07:17.143020800]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [a4c98d6a-ebdb-47d3-b3e1-b84d2c7a33eb]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [Aguardando pagamento via PIX]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Sao Paulo]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [PetVida Saude Animal]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [PIX]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [TIMESTAMP] - [2025-11-26T11:37:17.143020800]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [00020101021126440014BR.GOV.BCB.PIX0122kaualuiz1512@gmail.com520400005303986540559,905802BR5920PetVida Saude Animal6009Sao Paulo6304E273]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [PREMIUM]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjx0ZXh0IHg9JzEwMCcgeT0nMTAwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nMTAnPlFSIENPREUgUElYPC90ZXh0Pjx0ZXh0IHg9JzEwMCcgeT0nMTIwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nOCc+YTRjOThkNmEtZWJkYi00N2QzLWIzZTEtYjg0ZDJjN2EzM2ViPC90ZXh0Pjwvc3ZnPg==]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [AGUARDANDO_PIX]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [BIGINT] - [1]
+2025-11-26 11:07:17 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [DOUBLE] - [59.9]
+2025-11-26 11:08:17 - org.hibernate.SQL - 
+    select
+        pagamento0_.id as id1_1_,
+        pagamento0_.data_criacao as data_cri2_1_,
+        pagamento0_.data_pagamento as data_pag3_1_,
+        pagamento0_.id_transacao as id_trans4_1_,
+        pagamento0_.mensagem as mensagem5_1_,
+        pagamento0_.merchant_city as merchant6_1_,
+        pagamento0_.merchant_name as merchant7_1_,
+        pagamento0_.metodo_pagamento as metodo_p8_1_,
+        pagamento0_.pix_expira_em as pix_expi9_1_,
+        pagamento0_.pix_key as pix_key10_1_,
+        pagamento0_.pix_payload as pix_pay11_1_,
+        pagamento0_.plano as plano12_1_,
+        pagamento0_.qr_code_base64 as qr_code13_1_,
+        pagamento0_.status as status14_1_,
+        pagamento0_.usuario_id as usuario15_1_,
+        pagamento0_.valor as valor16_1_ 
+    from
+        pagamento pagamento0_ 
+    where
+        pagamento0_.id_transacao=?
+2025-11-26 11:08:23 - com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4cb24e2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-11-26 11:08:23 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a4c98d6a-ebdb-47d3-b3e1-b84d2c7a33eb]
+2025-11-26 11:08:27 - org.hibernate.SQL - 
+    update
+        pagamento 
+    set
+        data_criacao=?,
+        data_pagamento=?,
+        id_transacao=?,
+        mensagem=?,
+        merchant_city=?,
+        merchant_name=?,
+        metodo_pagamento=?,
+        pix_expira_em=?,
+        pix_key=?,
+        pix_payload=?,
+        plano=?,
+        qr_code_base64=?,
+        status=?,
+        usuario_id=?,
+        valor=? 
+    where
+        id=?
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2025-11-26T11:07:17.143021]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2025-11-26T11:08:24.229673500]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [a4c98d6a-ebdb-47d3-b3e1-b84d2c7a33eb]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [Pagamento simulado com sucesso]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Sao Paulo]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [PetVida Saude Animal]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [PIX]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [TIMESTAMP] - [2025-11-26T11:37:17.143021]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [kaualuiz1512@gmail.com]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [00020101021126440014BR.GOV.BCB.PIX0122kaualuiz1512@gmail.com520400005303986540559,905802BR5920PetVida Saude Animal6009Sao Paulo6304E273]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [PREMIUM]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjx0ZXh0IHg9JzEwMCcgeT0nMTAwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nMTAnPlFSIENPREUgUElYPC90ZXh0Pjx0ZXh0IHg9JzEwMCcgeT0nMTIwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nOCc+YTRjOThkNmEtZWJkYi00N2QzLWIzZTEtYjg0ZDJjN2EzM2ViPC90ZXh0Pjwvc3ZnPg==]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [CONCLUIDO]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [BIGINT] - [1]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [DOUBLE] - [59.9]
+2025-11-26 11:08:27 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [BIGINT] - [1]
+2025-11-26 11:08:40 - org.hibernate.SQL - 
+    select
+        usuario0_.id as id1_2_0_,
+        usuario0_.celular as celular2_2_0_,
+        usuario0_.codigo_recuperacao_expira_em as codigo_r3_2_0_,
+        usuario0_.codigo_recuperacao_senha as codigo_r4_2_0_,
+        usuario0_.codigo_verificacao as codigo_v5_2_0_,
+        usuario0_.cpf as cpf6_2_0_,
+        usuario0_.criado_em as criado_e7_2_0_,
+        usuario0_.email as email8_2_0_,
+        usuario0_.endereco as endereco9_2_0_,
+        usuario0_.foto_perfil as foto_pe10_2_0_,
+        usuario0_.nome as nome11_2_0_,
+        usuario0_.plano as plano12_2_0_,
+        usuario0_.plano_valido_ate as plano_v13_2_0_,
+        usuario0_.senha as senha14_2_0_,
+        usuario0_.status as status15_2_0_,
+        usuario0_.tentativas_recuperacao as tentati16_2_0_,
+        usuario0_.ultima_tentativa_recuperacao as ultima_17_2_0_,
+        usuario0_.verificado_em as verific18_2_0_ 
+    from
+        usuario usuario0_ 
+    where
+        usuario0_.id=?
+2025-11-26 11:08:40 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2025-11-26 11:08:42 - org.hibernate.SQL - 
+    update
+        usuario 
+    set
+        celular=?,
+        codigo_recuperacao_expira_em=?,
+        codigo_recuperacao_senha=?,
+        codigo_verificacao=?,
+        cpf=?,
+        criado_em=?,
+        email=?,
+        endereco=?,
+        foto_perfil=?,
+        nome=?,
+        plano=?,
+        plano_valido_ate=?,
+        senha=?,
+        status=?,
+        tentativas_recuperacao=?,
+        ultima_tentativa_recuperacao=?,
+        verificado_em=? 
+    where
+        id=?
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [(11) 99999-8888]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [111.222.333-44]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [TIMESTAMP] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [teste@email.com]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [Teste Manual]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [PREMIUM]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [TIMESTAMP] - [2025-12-26T11:08:42.124722800]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [senha123]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [ATIVO]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [INTEGER] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [TIMESTAMP] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [TIMESTAMP] - [null]
+2025-11-26 11:08:42 - o.h.type.descriptor.sql.BasicBinder - binding parameter [18] as [BIGINT] - [1]
+2025-11-26 11:10:05 - org.hibernate.SQL - 
+    insert 
+    into
+        agendamento
+        (contato, cpf, criado_em, data_agendamento, data_realizacao, descricao, diagnostico, especie, exames_solicitados, genero, historico_saude, horario, idade_pet, nome_dono, nome_pet, nome_veterinario, observacoes, observacoes_medicas, peso, peso_pet, prescricao, raca, sintomas, status, tipo, usuario_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [TIMESTAMP] - [2025-11-26T11:10:04.663696100]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [TIMESTAMP] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [TIMESTAMP] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [VARCHAR] - [Rex]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [VARCHAR] - [Check-up anual do Rex]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [18] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [19] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [20] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [21] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [22] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [23] as [VARCHAR] - [null]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [24] as [VARCHAR] - [AGENDADO]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [25] as [VARCHAR] - [CONSULTA]
+2025-11-26 11:10:05 - o.h.type.descriptor.sql.BasicBinder - binding parameter [26] as [BIGINT] - [5]
+2025-11-26 11:11:59 - org.hibernate.SQL - 
+    select
+        agendament0_.id as id1_0_0_,
+        agendament0_.contato as contato2_0_0_,
+        agendament0_.cpf as cpf3_0_0_,
+        agendament0_.criado_em as criado_e4_0_0_,
+        agendament0_.data_agendamento as data_age5_0_0_,
+        agendament0_.data_realizacao as data_rea6_0_0_,
+        agendament0_.descricao as descrica7_0_0_,
+        agendament0_.diagnostico as diagnost8_0_0_,
+        agendament0_.especie as especie9_0_0_,
+        agendament0_.exames_solicitados as exames_10_0_0_,
+        agendament0_.genero as genero11_0_0_,
+        agendament0_.historico_saude as histori12_0_0_,
+        agendament0_.horario as horario13_0_0_,
+        agendament0_.idade_pet as idade_p14_0_0_,
+        agendament0_.nome_dono as nome_do15_0_0_,
+        agendament0_.nome_pet as nome_pe16_0_0_,
+        agendament0_.nome_veterinario as nome_ve17_0_0_,
+        agendament0_.observacoes as observa18_0_0_,
+        agendament0_.observacoes_medicas as observa19_0_0_,
+        agendament0_.peso as peso20_0_0_,
+        agendament0_.peso_pet as peso_pe21_0_0_,
+        agendament0_.prescricao as prescri22_0_0_,
+        agendament0_.raca as raca23_0_0_,
+        agendament0_.sintomas as sintoma24_0_0_,
+        agendament0_.status as status25_0_0_,
+        agendament0_.tipo as tipo26_0_0_,
+        agendament0_.usuario_id as usuario27_0_0_ 
+    from
+        agendamento agendament0_ 
+    where
+        agendament0_.id=?
+2025-11-26 11:11:59 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2025-11-26 11:12:01 - org.hibernate.SQL - 
+    update
+        agendamento 
+    set
+        contato=?,
+        cpf=?,
+        criado_em=?,
+        data_agendamento=?,
+        data_realizacao=?,
+        descricao=?,
+        diagnostico=?,
+        especie=?,
+        exames_solicitados=?,
+        genero=?,
+        historico_saude=?,
+        horario=?,
+        idade_pet=?,
+        nome_dono=?,
+        nome_pet=?,
+        nome_veterinario=?,
+        observacoes=?,
+        observacoes_medicas=?,
+        peso=?,
+        peso_pet=?,
+        prescricao=?,
+        raca=?,
+        sintomas=?,
+        status=?,
+        tipo=?,
+        usuario_id=? 
+    where
+        id=?
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [TIMESTAMP] - [2025-11-26T11:10:04.663696]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [TIMESTAMP] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [TIMESTAMP] - [2025-11-26T11:12:01.392180800]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Pet saudável, sem alterações significativas. Peso ideal, pelagem brilhante.]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [13] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [14] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [15] as [VARCHAR] - [Rex]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [16] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [17] as [VARCHAR] - [Check-up anual do Rex]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [18] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [19] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [20] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [21] as [VARCHAR] - [Manter alimentação balanceada, exercícios regulares. Retorno em 6 meses.]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [22] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [23] as [VARCHAR] - [null]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [24] as [VARCHAR] - [REALIZADO]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [25] as [VARCHAR] - [CONSULTA]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [26] as [BIGINT] - [5]
+2025-11-26 11:12:01 - o.h.type.descriptor.sql.BasicBinder - binding parameter [27] as [BIGINT] - [9]

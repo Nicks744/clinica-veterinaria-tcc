@@ -147,7 +147,7 @@ O sistema digitaliza processos essenciais — desde o agendamento de consultas a
 
 ## 🙏 9. Agradecimentos
 
-Agradecemos aos **Professores Sérgio Gal e Átila** pela orientação e suporte durante o desenvolvimento. Também estendemos nossos agradecimentos à equipe docente da **Escola SENAI Suíço Brasileira Paulo Ernesto Tolle** por sua dedicação e contribuição à nossa formação.
+Agradecemos ao **Professor Átila Olivi** pela orientação e suporte durante o desenvolvimento. Também estendemos nossos agradecimentos à equipe docente da **Escola SENAI Suíço Brasileira Paulo Ernesto Tolle** por sua dedicação e contribuição à nossa formação.
 
 ---
 

@@ -1,0 +1,264 @@
+/* --- Seu CSS Existente (Não alterado, apenas para contexto) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    width: 95%;
+    margin: 30px auto;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #dee2e6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de papel cortado (picote) */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(135deg, transparent 5px, #f8f9fa 5px, #f8f9fa 10px, transparent 10px),
+                linear-gradient(-135deg, transparent 5px, #f8f9fa 5px, #f8f9fa 10px, transparent 10px);
+    background-size: 15px 15px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-transform: uppercase;
+    border-bottom: 2px dashed #e9ecef;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #495057;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 15px;
+    margin: 6px 0;
+    line-height: 1.5;
+    color: #343a40;
+}
+
+p strong {
+    color: #212529;
+}
+
+/* Estilo para as linhas de detalhes (label e valor) */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #ced4da;
+}
+
+.detail-row:last-of-type {
+    border-bottom: none;
+}
+
+/* Estilo para agrupar as seções de detalhes */
+.detail-group {
+    margin-bottom: 20px;
+}
+
+.detail-group .detail-row:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para o conteúdo do relatório detalhado */
+.report-content {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e6ea;
+}
+
+.total-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #6c757d;
+    text-align: right;
+}
+
+.total-section p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    margin: 5px 0;
+}
+
+.message {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* --- Seção de Botões (mantida para desktop/telas maiores) --- */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #e9ecef;
+}
+
+.btn-voltar, .btn-imprimir {
+    padding: 12px 22px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Permite que os botões cresçam para preencher o espaço */
+    max-width: 200px; /* Limita a largura máxima para não ficarem gigantes */
+    text-align: center;
+    /* Adicionado para garantir largura mínima e consistência */
+    min-width: 120px; /* Ajuste este valor se necessário */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
+}
+
+
+.btn-voltar:hover, .btn-imprimir:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-imprimir {
+    background-color: #28a745;
+}
+
+.btn-imprimir:hover {
+    background-color: #218838;
+}
+
+.erro {
+    color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Estilos para impressão */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .container::before {
+        display: none;
+    }
+
+    .btn-group {
+        display: none;
+    }
+
+    h1, h2, p {
+        color: #000 !important;
+    }
+
+    .total-section p {
+        color: #000 !important;
+    }
+}
+
+/* --- Responsividade para dispositivos móveis (Principal Mudança AQUI) --- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px auto;
+        border-radius: 5px;
+        width: 98%;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .total-section p {
+        font-size: 18px;
+    }
+
+    .btn-group {
+        flex-direction: column; /* Empilha os botões */
+        gap: 10px;
+        /* Remover justify-content: center; para que os itens usem 100% da largura do flex container */
+    }
+
+    .btn-voltar, .btn-imprimir {
+        width: 100%; /* Fazem os botões ocuparem 100% da largura disponível */
+        max-width: none; /* Remove a limitação de largura máxima */
+        min-width: unset; /* Remove a largura mínima para não criar espaçamentos indesejados */
+        margin: 0; /* Remove margem lateral */
+        padding: 12px 15px;
+        /* Adicionado para centralizar o texto dentro do botão se houver espaço */
+        text-align: center;
+        /* Usar box-sizing: border-box para garantir que padding e border não adicionem largura */
+        box-sizing: border-box;
+    }
+
+    .container::before {
+        height: 10px;
+        background-size: 10px 10px;
+    }
+}

@@ -1,0 +1,136 @@
+/* realizandoConsulta.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: #28a745;
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.info-block {
+    margin-bottom: 30px;
+    border-left: 4px solid #28a745;
+    padding-left: 16px;
+    background-color: #f0fdf4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-block p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+label {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: border 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 24px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px 15px;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .info-block {
+        padding: 15px;
+    }
+
+    .info-block p,
+    label,
+    textarea,
+    input[type="submit"] {
+        font-size: 14px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

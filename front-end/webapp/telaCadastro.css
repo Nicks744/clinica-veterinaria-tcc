@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fundo suave, consistente com a tela de login */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que ocupa a altura total da viewport */
+    padding: 20px;
+    color: #333; /* Cor do texto padrão */
+}
+
+.register-container {
+    background-color: #ffffff; /* Fundo branco para o container */
+    padding: 40px;
+    border-radius: 10px; /* Borda um pouco mais arredondada */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada e suave */
+    width: 100%;
+    max-width: 480px; /* Um pouco mais largo para acomodar mais campos se necessário */
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px auto; /* Centraliza e adiciona margem se a tela for menor que min-height */
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #002F4B; /* Azul escuro principal */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#form-title {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    border: 1px solid #cceeff; /* Borda em tom de azul claro */
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #004d7c; /* Borda em tom de azul mais escuro no foco */
+    box-shadow: 0 0 0 3px rgba(0, 77, 124, 0.2); /* Sombra suave no foco */
+}
+
+/* Estilo para os botões de ação (Cadastrar, Cancelar) */
+.btn-action { /* Nova classe base para os botões */
+    color: white;
+    padding: 15px 25px;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Espaço acima do botão */
+    font-weight: bold;
+}
+
+.primary-btn { /* Para o botão "Cadastrar" */
+    background-color: #002F4B; /* Azul escuro principal */
+    margin-bottom: 10px; /* Espaço entre o primário e o secundário */
+}
+
+.primary-btn:hover {
+    background-color: #004d7c; /* Azul mais claro no hover */
+    transform: translateY(-2px); /* Efeito de elevação suave */
+}
+
+.secondary-btn { /* Para o botão "Cancelar" */
+    background-color: #6c757d; /* Cinza para o botão cancelar */
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268; /* Cinza mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilos para mensagens de erro */
+.error-message { /* Para spans de erro, como o de "confirmar senha" */
+    color: #dc3545; /* Vermelho forte */
+    font-size: 14px;
+    margin-top: 5px;
+    display: block; /* Garante que o span ocupe uma linha */
+    text-align: left; /* Alinha o texto de erro à esquerda */
+}
+
+.error-list { /* Para listas de erros (CPF, Senha) */
+    color: #dc3545; /* Vermelho forte */
+    font-size: 14px;
+    margin-top: 5px;
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding-left: 0; /* Remove o padding padrão da lista */
+    text-align: left; /* Alinha a lista à esquerda */
+}
+
+.error-list li::before {
+    content: "✖ "; /* Ícone de X antes de cada item */
+    font-weight: bold;
+    color: #dc3545;
+    margin-right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .register-container {
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #form-title {
+        font-size: 18px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+    }
+
+    .input-group input {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .btn-action {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+}
+
+.register-text {
+    margin-top: 30px; /* Espaçamento maior antes do texto de "Não possui conta" */
+    font-size: 15px;
+    color: #666;
+}
+
+.register-link {
+    color: #002F4B; /* Azul escuro principal para o link */
+    text-decoration: none; /* Sem sublinhado */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #004d7c; /* Azul mais claro no hover */
+    text-decoration: underline; /* Sublinhado no hover para indicar que é clicável */
+}

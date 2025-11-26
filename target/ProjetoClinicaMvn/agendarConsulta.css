@@ -1,0 +1,162 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o fundo e a fonte padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: block; 
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.error-message {
+    display: block;
+    margin-top: 4px;
+    color: red;
+    font-size: 12px;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0 auto; /* <-- Topo com 20px */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+
+h2 {
+    font-size: 35px;
+    color: #002F4B;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 80px;
+}
+
+input[type="date"] {
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    flex: 1; /* Faz os botões ocuparem o mesmo espaço */
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Evita botões muito pequenos em telas pequenas */
+}
+
+.btnSalvar {
+    background-color: #002F4B; /* Azul claro */
+    color: white;
+}
+
+.btnSalvar:hover {
+    background-color: #001928; /* Azul escuro */
+}
+
+.btnCancelar {
+    background-color: #f1f1f1; /* Cor de fundo neutra */
+    color: #333;
+}
+
+.btnCancelar:hover {
+    background-color: #e0e0e0; /* Cor de fundo neutra mais escura */
+}
+
+.barra-azul {
+    position: relative; /* necessário para posicionar a imagem em relação à barra */
+    height: 60px;
+    width: 100%;
+    background-color: #002F4B;
+    margin: 10px 0 20px 0;
+  
+}
+
+
+.img-decorativa {
+    position: absolute;
+    top: -190px; /* ajusta para subir sobre a barra */
+    left: 15%;
+    transform: translateX(-50%);
+    height: 190px; /* ajuste conforme o tamanho desejado */
+    z-index: 10;
+}
+
+
+
+h3 {
+    color: #4674A5; /* Azul escuro */
+}
+
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%; /* Mantém o formulário responsivo sem perder conteúdo */
+        padding: 20px;
+        max-height: 80vh; /* Impede que fique muito grande em telas menores */
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%; /* Faz os botões ocuparem a largura total */
+        font-size: 1em;
+    }
+}
+
+h3 {
+    color: #4674A5; /* Azul escuro */
+}
+
+

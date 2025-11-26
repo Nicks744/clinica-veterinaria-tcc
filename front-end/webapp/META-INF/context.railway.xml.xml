@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resources>
+        <PreResources className="org.apache.catalina.webresources.DirResourceSet"
+                      webAppMount="/uploads"
+                      base="/data/clinica_uploads" />
+    </Resources>
+</Context>

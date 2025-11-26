@@ -1,0 +1,10 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <!-- O nome "clinica-vet-pu" é o identificador que nosso código Java usará. -->
+    <persistence-unit name="clinica-vet-pu">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- O Hibernate ainda precisa saber quais classes são entidades. -->
+        <!-- Certifique-se de que o caminho aqui está correto para sua classe Usuario. -->
+        <class>br.com.clinica.model.Usuario</class>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Clínica Veterinária Hattori</title>
+
+        <link rel="icon" type="image/svg+xml" href="imgs_inicio/minilogo.svg">
+        <link rel="icon" type="image/png" href="imgs_inicio/minilogo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		
+		<style>
+			/* =================================================================== */
+			/* ===== ESTILOS PARA O NOVO MODAL DO APLICATIVO ===== */
+			/* =================================================================== */
+			.app-modal-overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 42, 69, 0.8);
+				z-index: 1050;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			.app-modal-content {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0.95);
+				background-color: #fff;
+				padding: 2.5em;
+				border-radius: 12px;
+				width: 90%;
+				max-width: 800px;
+				box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+				z-index: 1051;
+				opacity: 0;
+				transition: opacity 0.3s ease, transform 0.3s ease;
+			}
+			.app-modal-overlay.show, .app-modal-content.show {
+				display: block;
+				opacity: 1;
+			}
+			.app-modal-content.show {
+				transform: translate(-50%, -50%) scale(1);
+			}
+			.app-modal-close {
+				position: absolute;
+				top: 15px;
+				right: 20px;
+				font-size: 2rem;
+				font-weight: 300;
+				color: #aaa;
+				cursor: pointer;
+				line-height: 1;
+			}
+			.app-modal-close:hover {
+				color: #333;
+			}
+			.app-modal-body h2 {
+				color: #002a45;
+				margin-bottom: 0.5em;
+				font-size: 1.8rem;
+			}
+			.app-modal-body .app-features p {
+				color: #555;
+				margin-bottom: 0.75em;
+				font-size: 1rem;
+				display: flex;
+    			align-items: center;
+			}
+			.app-modal-body .app-features .fa-check-circle {
+				color: #002a45;
+				margin-right: 10px;
+			}
+			.qr-section { text-align: center; }
+			.qr-section img { width: 150px; height: 150px; margin-bottom: 1em; }
+			.app-download-buttons .app-button img { height: 50px; margin: 0.5em; transition: transform 0.2s ease-in-out; }
+			.app-download-buttons .app-button:hover img { transform: scale(1.05); }
+			@media (max-width: 767px) {
+				.app-modal-body .row {
+					text-align: center;
+				}
+				.app-features {
+					margin-bottom: 1.5em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top custom-header">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Logo" class="img-fluid logo-custom" />
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#first">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://wa.me/5511953423838" target="_blank">Contato</a></li>
+		<li class="nav-item">
+          <a href="telaLogin.jsp" class="btn btn-login ms-3">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Médica Veterinária em São Paulo</h1>
+							<p class="major">A Clínica foi criada com o objetivo de fornecer serviços veterinários de alta qualidade, focados no bem-estar e saúde dos animais. Nossa clínica conta com uma equipe de profissionais experientes e capacitados, além de uma infraestrutura moderna, para garantir que seu pet receba o melhor atendimento possível.</p>
+							<ul class="actions stacked">
+								<li><a href="telaCadastro.jsp" class="button big wide smooth-scroll-middle">Cadastre-se</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/gallery/degrade2.jpeg" alt="" />
+							<div class="ananda">
+								<img src="images/ananda.jpeg"	alt="[Foto da Dra. Ananda]"/>
+							</div>
+						</div>
+					</section>
+
+				<!-- Conteúdo principal do site (Seções Two, Three, Four, Five, Six...) -->
+				<!-- ... seu código ... -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Sobre nós</h2>
+							<p>Em nosso centro, acreditamos que a qualidade do atendimento vai além do conhecimento técnico; por isso, prezamos por uma abordagem atenciosa, garantindo que cada animal seja tratado com o máximo de cuidado e respeito. Nosso foco está na prevenção, diagnóstico e tratamento de doenças, com ênfase no acompanhamento contínuo da saúde dos nossos pacientes.</p>
+						</div>
+						<div class="image">
+							<img src="images/gallery/degrade1.jpeg" alt="" />
+						</div>
+					</section>
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Nosso compromisso é oferecer cuidados completos para que seu pet tenha uma vida saudável. </h2>
+							<p>Oferecemos diagnósticos precisos e tratamentos eficazes, sempre com o carinho e respeito que seu pet merece. Nossa equipe está pronta para proporcionar o melhor cuidado, garantindo que seu amigo esteja confortável, seguro e em boas mãos em todas as etapas do atendimento.</p>
+						</div>
+						<div class="image">
+							<img src="images/gallery/degrade3.jpeg" alt="" />
+						</div>
+					</section>
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Clínica Pet & Internação</h2>
+							<p>Nossa clínica é especializada em cuidados veterinários, fundada com o objetivo de proporcionar um atendimento preciso e confiável para animais de companhia. Nossa estrutura moderna, equipada com tecnologia avançada, permite oferecer um serviço completo para as necessidades de saúde dos pets.</p>
+						</div>
+						<div class="image">
+							<img src="images/gallery/degrade1.jpeg" alt="" />
+						</div>
+					</section>
+					<section class="wrapper style1 align-center" id="servicos">
+						<div class="inner">
+							<h2>Nossos Serviços</h2>
+							<p>Nossa clínica dispõe de tecnologias de ponta para diagnósticos e tratamentos, abrangendo uma ampla gama de serviços, como consultas clínicas, vacinação, exames laboratoriais, cirurgias, e atendimento de urgências. </p>
+						</div>
+						<div class="container mt-5">
+						  <div class="row">
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/alta-complex.jpeg" class="card-img-top" alt="Cirurgia de Alta Complexidade"><div class="card-body"><h5 class="card-title">Cirurgia De Alta Complexidade</h5><p class="card-text">Realizamos cirurgias de alta complexidade para tratar condições graves.</p></div></div></div>
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/vacinas.jpeg" class="card-img-top" alt="Vacinas"><div class="card-body"><h5 class="card-title">Vacinas</h5><p class="card-text">Oferecemos um calendário de vacinação completo e atualizado.</p></div></div></div>
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/exames.jpeg" class="card-img-top" alt="Exames"><div class="card-body"><h5 class="card-title">Exames</h5><p class="card-text">Realizamos exames completos para avaliar a saúde do seu pet, garantindo diagnósticos rápidos.</p></div></div></div>
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/castração.jpeg" class="card-img-top" alt="Castração"><div class="card-body"><h5 class="card-title">Castração</h5><p class="card-text">Realizamos castração segura e humanizada para cães e gatos.</p></div></div></div>
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/clinica-para.jpeg" class="card-img-top" alt="Clínica"><div class="card-body"><h5 class="card-title">Clínica Para Todos</h5><p class="card-text">Nossa clínica presta atendimento veterinário para todos animais domésticos.</p></div></div></div>
+							<div class="col-md-4 mb-4"><div class="card h-100"><img src="images/gallery/micro.jpeg" class="card-img-top" alt="Microchip"><div class="card-body"><h5 class="card-title">Microchip</h5><p class="card-text">Oferecemos o serviço de microchipagem para identificação segura de cães e gatos.</p></div></div></div>
+						  </div>
+						</div>
+					</section>
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Sobre mim</h2>
+							<p>Olá, sou a Dra. Ananda Hattori, e minha vida é dedicada ao cuidado e bem-estar dos animais. Desde pequena, sempre soube que queria ser médica veterinária, e essa paixão me guiou por toda a minha jornada educacional e profissional.</p>
+							<p>Mestre pela USP, professora e cirurgiã no Veros Hospital, ofereço um atendimento especializado e humanizado. Meu compromisso é com a saúde e bem-estar dos animais, garantindo tratamentos modernos e eficientes.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Ir para o topo</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/ananda2 (1).jpeg" alt="[Foto da Dra. Ananda Hattori]" />
+						</div>
+					</section>
+				
+				<!-- Footer -->
+				<footer class="wrapper style1 align-center">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://wa.me/5511953423838" target="_blank" class="icon brands style2 fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+							<li><a href="https://www.instagram.com/clinica_veterinaria.hattori/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li>
+								<a href="https://www.google.com/maps?q=Rua+Exemplo,+123,+São+Paulo,+SP" target="_blank" class="icon style2">
+								  <img src="images/localizacao.png" alt="Localização" class="icon-img localizacao">
+								</a>
+							</li>
+							<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p>&copy; 2025 Copyright. Todos os direitos reservados.</p>
+					</div>
+				</footer>
+			</div>
+
+<!-- ============================================= -->
+<!-- ===== ESTRUTURA DO NOVO MODAL DO APP ===== -->
+<!-- ============================================= -->
+<div class="app-modal-overlay" id="appModalOverlay"></div>
+<div class="app-modal-content" id="appModalContent">
+    <span class="app-modal-close" id="appModalClose">&times;</span>
+    <div class="container-fluid">
+        <div class="row align-items-center app-modal-body">
+            <!-- Coluna da Esquerda: Textos e Benefícios -->
+            <div class="col-md-7">
+                <h2>Uma Nova Experiência de Cuidado</h2>
+                <p>Otimize a saúde do seu pet com nosso aplicativo exclusivo. Agende, acompanhe e acesse tudo em um só lugar.</p>
+                <div class="app-features">
+                    <p><i class="fas fa-check-circle"></i> Agendamento prioritário para procedimentos.</p>
+                    <p><i class="fas fa-check-circle"></i> Acesso completo ao prontuário digital.</p>
+                    <p><i class="fas fa-check-circle"></i> Notificações importantes sobre saúde e vacinas.</p>
+                </div>
+                <div class="app-download-buttons d-none d-md-block">
+                    <a href="#" class="app-button" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play"></a>
+                    <a href="#" class="app-button" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Baixar na App Store"></a>
+                </div>
+            </div>
+            <!-- Coluna da Direita: QR Code e Botões -->
+            <div class="col-md-5 qr-section">
+                <p class="mb-2"><strong>Aponte a câmera e baixe agora:</strong></p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.google.com/search?q=clinica+veterinaria+ananda" alt="QR Code para baixar o aplicativo">
+                <div class="app-download-buttons d-block d-md-none mt-3">
+                    <a href="#" class="app-button" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play"></a>
+                    <a href="#" class="app-button" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Baixar na App Store"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Script para o Modal e Correção do Menu Móvel -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const modalOverlay = document.getElementById('appModalOverlay');
+				const modalContent = document.getElementById('appModalContent');
+				const closeModalBtn = document.getElementById('appModalClose');
+
+				const showModal = () => {
+					modalOverlay.classList.add('show');
+					modalContent.classList.add('show');
+					sessionStorage.setItem('appModalShown', 'true');
+				};
+
+				const closeModal = (e) => {
+                    // Impede que o clique dentro do modal feche o modal
+                    if (e && e.target !== modalOverlay && e.target !== closeModalBtn) {
+                        return;
+                    }
+					modalOverlay.classList.remove('show');
+					modalContent.classList.remove('show');
+				};
+
+				const handleScroll = () => {
+					if (sessionStorage.getItem('appModalShown')) {
+						window.removeEventListener('scroll', handleScroll);
+						return;
+					}
+					if (window.scrollY > 700) {
+						showModal();
+						window.removeEventListener('scroll', handleScroll);
+					}
+				};
+
+				window.addEventListener('scroll', handleScroll);
+				closeModalBtn.addEventListener('click', closeModal);
+				modalOverlay.addEventListener('click', closeModal);
+
+				// --- CORREÇÃO PARA O MENU MÓVEL ---
+				const navLinks = document.querySelectorAll('#navbarNav .nav-link, #navbarNav .dropdown-item');
+				const navCollapse = document.getElementById('navbarNav');
+				if (navCollapse) {
+					const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+					navLinks.forEach(function(link) {
+						link.addEventListener('click', function() {
+							if (navCollapse.classList.contains('show')) {
+								bsCollapse.hide();
+							}
+						});
+					});
+				}
+			});
+		</script>
+	</body>
+</html>
+
